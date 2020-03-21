@@ -11,3 +11,4 @@
 - **total_negatives**: total number of people that tested negative for the virus
 - **total_deaths**
 - **total_recovered**
+- **total_active**
