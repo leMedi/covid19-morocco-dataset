@@ -1,4 +1,8 @@
 # Morocco COVID-19 dataset
+## Live data website
+
+[https://lemedi.github.io/covid19-morocco-dataset/](https://lemedi.github.io/covid19-morocco-dataset/)
+
 ## Schema
 
 - **date**
