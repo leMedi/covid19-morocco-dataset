@@ -1,4 +1,4 @@
-date,total_tested,total_positives,total_negatives,total_deaths,total_recovered,total_actives
+date,total_tested,total_positives,total_negatives,total_deaths,total_recovered,total_active
 07/02/2020,9,0,9,0,0,0
 08/02/2020,9,0,9,0,0,0
 09/02/2020,9,0,9,0,0,0
