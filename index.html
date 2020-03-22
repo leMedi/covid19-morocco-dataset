@@ -101,12 +101,15 @@
       }
 
       function renderMainChart(data) {
+
+        const activeCases = data.totalCases.map((totalCases, index) => totalCases - data.totalDeaths[index] - data.totalRecovered[index])
+
         mainChart = new Chart(ctx, {
           type: "line",
           data: {
             labels: data.dates,
             datasets: [
-              generateDataSet("Total Active Cases", data.totalActiveCases, "#6a737d"),
+              generateDataSet("Total Active Cases", activeCases, "#6a737d"),
               generateDataSet("Total Deaths", data.totalDeaths, "#c0392b")
             ]
           },
@@ -141,7 +144,6 @@
           totalCases: [],
           totalDeaths: [],
           totalRecovered: [],
-          totalActiveCases: []
         };
 
         lines.forEach(line => {
@@ -151,7 +153,6 @@
           data.totalCases.push(cols[2]);
           data.totalDeaths.push(cols[4]);
           data.totalRecovered.push(cols[5]);
-          data.totalActiveCases.push(cols[6])
         });
 
         return data;
@@ -161,7 +162,7 @@
         const totalCases = data.totalCases[data.totalCases.length - 1];
         const totalDeaths = data.totalDeaths[data.totalDeaths.length - 1];
         const totalRecovered = data.totalRecovered[data.totalRecovered.length - 1];
-        const totalActiveCases = data.totalActiveCases[data.totalActiveCases.length - 1];
+        const totalActiveCases = totalCases - totalDeaths - totalRecovered;
 
         totalCasesElement.innerText = totalCases;
         totalDeathsElement.innerText = totalDeaths;
