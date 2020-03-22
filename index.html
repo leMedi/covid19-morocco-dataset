@@ -8,7 +8,6 @@
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
 
     <title>COVID-19 Live Numbers</title>
 
@@ -163,6 +162,8 @@
         const totalDeaths = data.totalDeaths[data.totalDeaths.length - 1];
         const totalRecovered = data.totalRecovered[data.totalRecovered.length - 1];
         const totalActiveCases = totalCases - totalDeaths - totalRecovered;
+
+        console.log()
 
         totalCasesElement.innerText = totalCases;
         totalDeathsElement.innerText = totalDeaths;
