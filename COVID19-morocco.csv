@@ -52,3 +52,4 @@ date,total_tested,total_positives,total_negatives,total_deaths,total_recovered
 2020-03-28,1976,402,1574,25,12
 2020-03-29,2273,479,1794,26,13
 2020-03-30,2641,534,2107,33,14
+2020-03-31,3079,617,2462,36,24
