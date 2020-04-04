@@ -56,3 +56,4 @@ date,total_tested,total_positives,total_negatives,total_deaths,total_recovered
 2020-04-01,3345,654,2691,39,29
 2020-04-02,3624,708,2916,44,31
 2020-04-03,3823,761,3062,48,57
+2020-04-04,4070,858,3212,50,62
