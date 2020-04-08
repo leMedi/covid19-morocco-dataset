@@ -137,7 +137,6 @@
 
         const data = {
           dates: [],
-          totalTested: [],
           totalCases: [],
           totalDeaths: [],
           totalRecovered: [],
@@ -146,10 +145,9 @@
         lines.forEach(line => {
           const cols = line.split(",");
           data.dates.push(cols[0]);
-          data.totalTested.push(cols[1]);
-          data.totalCases.push(cols[2]);
-          data.totalDeaths.push(cols[4]);
-          data.totalRecovered.push(cols[5]);
+          data.totalCases.push(cols[1]);
+          data.totalDeaths.push(cols[3]);
+          data.totalRecovered.push(cols[4]);
         });
 
         return data;
@@ -160,8 +158,6 @@
         const totalDeaths = data.totalDeaths[data.totalDeaths.length - 1];
         const totalRecovered = data.totalRecovered[data.totalRecovered.length - 1];
         const totalActiveCases = totalCases - totalDeaths - totalRecovered;
-
-        console.log()
 
         totalCasesElement.innerText = totalCases;
         totalDeathsElement.innerText = totalDeaths;
